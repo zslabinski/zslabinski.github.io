@@ -1,0 +1,358 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+header {
+    height: 4rem;
+    background-color: lightgrey;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+}
+
+nav {
+    overflow: hidden;
+    
+    padding-right: 1rem;
+}
+
+nav h1 {
+    display: inline-block;
+    margin: 2rem 0 0 1rem;
+    
+}
+
+nav ul {
+    float: right;
+}
+
+nav li {    display: inline-flex;
+    margin: 2.5rem 0 0 5px;
+    text-decoration: solid underline black 1px;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: orange;
+}
+a:active {
+    color: yellow;
+}
+
+.chevron {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 3px 7px;
+    transform: rotate(-45deg);
+}
+
+.arrows {
+    clip-path: polygon(50% 70%, 0 90%, 0 100%, 100% 100%, 100% 90%);
+    height: 65vh;
+    width: 100%;
+    position: absolute;
+
+}
+#arrow3 {
+    clip-path: polygon(50% 70%, 0 90%, 0 100%, 100% 100%, 100% 90%);
+    background-color: #0A369D;
+    height: 65vh;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    bottom: 1vh;
+    /* transition: height 1s ease-in-out; */
+
+}
+
+#arrow2 {
+    background-color: #92B4F4;
+    z-index: 2;
+    bottom: 7vh;
+    /* transition: height 1s ease-in-out; */
+    
+}
+
+#arrow1 {
+    background-color: rgba(21,15,56);
+    z-index: 1;
+    bottom: 13vh;
+    /* transition: height 1s ease-in-out; */
+       
+}
+.arrow-title {
+    float: right;
+    color: white;
+    text-align: center;
+    font-size: 2.5vh;
+    z-index: 5;
+    position: absolute;
+    bottom: 5%;
+    right: 3vw;
+    font-weight: 200;
+    
+}
+
+#arrow1:hover {
+    clip-path: polygon(50% 1%, 0 21%, 0 100%, 100% 100%, 100% 21%);
+    height: 85vh;
+    transition: height 1s ease-in-out;
+}
+
+#arrow1:hover #projects-title {
+    float:none;
+    top: 5rem;
+    bottom:auto;
+    right:40%;
+    left:auto;
+    width: 20%;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#arrow2:hover {
+    clip-path: polygon(50% 1%, 0 21%, 0 100%, 100% 100%, 100% 21%);
+    height: 85vh;
+    transition: height 1s ease-in-out;
+}
+
+#arrow2:hover + #arrow1 {
+    clip-path: polygon(50% 1%, 0 21%, 0 100%, 100% 100%, 100% 21%);
+    height: 85vh;
+    transition: height 1s ease-in-out;
+}
+
+#arrow2:hover #about-title {
+    float:none;
+    top: 5rem;
+    bottom:auto;
+    right:40%;
+    left:auto;
+    width: 20%;
+    font-size: 40px;
+    font-weight: 500;
+
+}
+
+#arrow3:hover {
+    clip-path: polygon(50% 1%, 0 21%, 0 100%, 100% 100%, 100% 21%);
+    height: 85vh;
+    transition: height 1s ease-in-out;
+}
+
+#arrow3:hover ~ .arrows {
+    clip-path: polygon(50% 1%, 0 21%, 0 100%, 100% 100%, 100% 21%);
+    height: 85vh;
+    transition: height 1s ease-in-out;
+}
+
+#arrow3:hover #contact-title {
+    float:none;
+    top: 5rem;
+    bottom:auto;
+    right:40%;
+    left:40%;
+    width: 20%;
+    font-size: 40px;
+    font-weight: 500;
+
+}
+
+#contact {
+    display: none;
+    width: 40%;
+    margin: 10rem auto;
+    
+}
+
+#arrow3:hover #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#contact p {
+    font-size: x-large;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+
+#about {
+    display: none;
+    flex-direction: row;
+    transform: translatey(22vh);
+    width: 80%;
+    justify-content: space-around;
+    
+}
+
+#arrow2:hover #about {
+    display: flex;
+}
+
+#about p {
+    display: inline-flexbox;
+    width: 100vw;
+    max-width: 500px;
+    margin-left: 36vw;
+    margin-right: 3vw;
+    font-size: larger;
+    flex-grow: 2;
+    text-align: justify;
+}
+
+#headshot {
+    display: inline-flexbox;
+    width: 15%;
+    max-width: 300px;
+    height: 15%;
+    max-height: 300px;
+    border-radius: 50%;
+    border-width: 3px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    
+}
+
+#projects {
+    display: none;
+    width: 80%;
+    margin: 15rem auto;
+
+}
+
+#projects ul{
+    list-style: none;
+}
+
+#projects li {
+    margin-bottom: 2rem;
+    font-size: x-large;
+}
+
+#arrow1:hover #projects {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+@media only screen and (max-width: 800px) {
+    .arrows {
+        clip-path: polygon(50% 00%, 0 0%, 0 100%, 100% 100%, 100% 0%);
+        height: 13vh;
+    
+    }
+    #arrow1 {
+        bottom: 21vh;
+    }
+    #arrow2 {
+        bottom: 11vh;
+    }
+    #arrow3 {
+        clip-path: polygon(50% 00%, 0 0%, 0 100%, 100% 100%, 100% 0%);
+        height: 13vh;
+    }
+    .arrow-title {
+        float:none;
+        right:35%;
+        left:35%;
+        width: 30%;
+        font-size: 35px;
+        font-weight: 500; 
+        top: 1.5rem;
+    }
+    #arrow1:hover {
+        clip-path: polygon(50% 00%, 0 0%, 0 100%, 100% 100%, 100% 0%);
+        height: 78vh;
+    }
+    #arrow2:hover {
+        clip-path: polygon(50% 00%, 0 0%, 0 100%, 100% 100%, 100% 0%);
+        height: 78vh;
+
+    }
+    #arrow2:hover + #arrow1 {
+        clip-path: polygon(50% 00%, 0 0%, 0 100%, 100% 100%, 100% 0%);
+        height: 78vh;
+
+
+    }
+    #arrow3:hover {
+        clip-path: polygon(50% 00%, 0 0%, 0 100%, 100% 100%, 100% 0%);
+        height: 78vh;
+
+    }
+    #arrow3:hover ~ .arrows {
+        clip-path: polygon(50% 00%, 0 0%, 0 100%, 100% 100%, 100% 0%);
+        height: 78vh;
+
+    }
+    #arrow1:hover #projects-title {
+        font-size: 35px;
+        top: 1.5rem;
+        right:35%;
+        left:35%;
+        width: 30%;   }
+    #arrow2:hover #about-title {
+        font-size: 35px;
+        top: 1.5rem;
+        right:35%;
+        left:35%;
+        width: 30%;
+    }
+    #arrow3:hover #contact-title {
+        font-size: 35px;
+        top: 1.5rem;
+        right:35%;
+        left:35%;
+        width: 30%;
+    }
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 2rem;
+    z-index: 5;
+    background-color: #0A369D;
+}
+
+footer h3 {
+    font-size: .75rem;
+    display: inline;
+    float: left;
+    margin-right: .25rem;
+    margin-top: 1rem;
+    color: white;
+}
